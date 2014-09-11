@@ -1,0 +1,1404 @@
+<!DOCTYPE HTML>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US" class="ie ie6 lt-ie9">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US" class="ie ie7 lt-ie9">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US" class="ie ie8 lt-ie9">
+<![endif]-->
+<!--[if gte IE 9]>
+<html lang="en-US" class="ie ie9">
+<![endif]-->
+<!--[if !(IE)]><!-->
+<html lang="en-US" class="">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <title>Dive into Single-Page Application with RaveJS and Grails</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="css/flowtime.css">
+    <link rel="stylesheet" href="css/themes/default.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <link rel="apple-touch-icon-precomposed"             href="img/touch-icon-iphone.png">
+    <link rel="apple-touch-icon-precomposed"   sizes="72x72"     href="img/touch-icon-ipad.png">
+    <link rel="apple-touch-icon-precomposed"   sizes="114x114"   href="img/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon-precomposed"   sizes="144x144"   href="img/touch-icon-ipad-retina.png">
+    <link href="img/favicon.ico" type="image/x-ico" rel="icon"/>
+
+</head>
+<body class="">
+
+<div class="flowtime">
+
+<div class="ft-section" data-id="Starters">
+    <div class="ft-page" data-id="Presentation" data-title="Presentation">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Dive into SPA with</h2> 
+                <h1><strong class="greach">RaveJS</strong></h1>
+				<h2>and</h2>
+                <h1><strong class="greach">Grails</strong></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Fabrice" data-title="Fabrice">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Fabrice Matrat</h1>
+
+                <img class="stacked-center" width="20%" src="img/fabrice_matrat.png"/><br/>
+
+                <p style=" font-size: 20px;  ">@fabricematrat<br/>fabricematrat@gmail.com</p>
+
+                <div style="width: 100%">
+                    <div style="float:left;text-align:right;display:inline-block;width: 25%">
+                        <img src="img/3musket33rs.jpeg" width="50%"/>
+                    </div>
+                    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 25%">
+                        <img src="img/rivierargug.png" width="50%"/>
+                    </div>
+                    <div style="float: right; font-size: 25px; text-align: right; display: inline-block; width: 25%">
+                        <img src="img/jssophia.jpg" width="50%"/>
+                    </div>
+                    <div style="float: right; font-size: 25px; text-align: right; display: inline-block; width: 25%">
+                        <img src="img/cujo.png" width="50%"/>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Warning" data-title="Warning">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Beware</h2>
+                <hr/><br/>
+                <ul>
+                    <li><strong class="greach">Strongly</strong> opinionated</li>
+                    <li>my own <strong class="greach">Point of View</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="General">
+
+    <div class="ft-page" data-id="SPA" data-title="SPA">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Single Page Application</h1>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Traditional" data-title="Traditional">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Traditional vs SPA</h2>
+                <hr/><br/>
+
+                <img src="img/traditional1.png"  class="stacked-center"/>
+                <img src="img/traditional2.png"  class="stacked-center"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPADetails" data-title="SPADetails">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>SPA</h2>
+                <hr/><br/>
+                <img src="img/spa.jpg" class="stacked-center" width="95%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPADef" data-title="SPADef">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Characteristics</h2>
+                <hr/><br/>                
+                <ul>
+                    <li>Fits on a <strong class="greach">single</strong> page</li>
+                    <li>Persisting <strong class="greach">client state</strong></li>
+                    <li>Loads on <strong class="greach">initial</strong> page load</li>
+                    <li><strong class="greach">Asynch</strong> loads of features</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPAAdvantages" data-title="SPAAdvantages">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>And ?</h2>
+                <hr/><br/>                
+                <div style="display: table-cell;">
+                    <ul>
+                        <p style="text-align: left"><strong class="greach">Pros</strong></p>
+                        <li>Responsive</li>
+                        <li>Application like interaction</li>
+                        <li>Raw Data</li>
+                        <li>Caching</li>
+                        <li>Offline</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div style="display: table-cell;">
+                    <p style="text-align: left"><strong>Cons</strong></p>
+                    <ul>
+                        <li>SEO</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPAAmadeus" data-title="SPAAmadeus">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Sample: Amadeus</h2>
+                <hr/><br/> 
+                <img class="stacked-center" src="img/amadeus.jpg" width="93%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPAJuju" data-title="SPAJuju">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Sample: Juju</h2>
+                <hr/><br/> 
+                <img src="img/juju.png" class="stacked-center" width="113%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GSP" data-title="GSP">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Grails ?</h2>
+                <hr/><br/>
+                <img class="stacked-center" src="img/gsps.png" width="92%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GSPHybrid" data-title="GSPHybrid">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>GSPs are Old Fashion</h2>
+                <hr/><br/>
+                <p><strong class="greach">Hybrid</strong> client/server view rendering with Grails</p>
+                <p>See <strong class="greach">Rob Fletcher</strong> Presention</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MVCs" data-title="MVCs">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Be carefull</h2>
+                <hr/><br/>
+                <img class="stacked-center" src="img/mvcs.png" width="50%"/>
+                <p>http://blog.mwaysolutions.com/2013/11/08/client-vs-serverside-rendering-the-big-battle-2/</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="Grails">
+
+
+    <div class="ft-page" data-id="Grails/JS" data-title="Grails/JS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Grails/JS</h1>
+                <hr/><br/>
+                <img class="stacked-center" src="img/love-hate.jpg" width="60%"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="UIPerformancePlugin" data-title="UIPerformancePlugin">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>UI Performance Plugin</h2>
+                <hr/>
+                <p>Authors: Burt Beckwith</p>
+
+                <ul>
+                    <li>Minification, GZip</li>
+                    <li>Caching, headers</li>
+                    <li>Taglibs</li>
+                    <li>Gzips dynamic text content</li>
+                    <li>Sprites</li>
+                    <li>JS at the bottom</li>
+                    <li><strong class="greach">Grails</strong> friendly</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Resource Plugin" data-title="Resource Plugin">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Resource Plugin</h2>
+                <hr/><br/>
+                <p>HTML resource management enhancements to replace g.resource</p>
+                <p>Marc Palmer, Luke Daley, Peter N. Steinmetz</p>
+                <ul>
+                    <li>Declare and Link resources in app</li>
+                    <li>Using require taglib in GSPs</li>
+                    <li>Redirection</li>
+                    <li>Dependencies</li>
+                </ul>               
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Asset Plugin" data-title="Asset Plugin">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Asset Plugin</h2>
+                <hr/><br/>
+                <ul>
+                    <li>File <strong class="greach">Dependencies</strong></li>
+                    <li><strong class="greach">Assets </strong>in plugins</li>
+                    <li><strong class="greach">Better</strong> Development Environment</li>
+                    <li><strong class="greach">Production</strong> Environment</li>
+                    <li><strong class="greach">Faster</strong> Startup times</li>
+                    <li>Coffee, LESS .. are better <strong class="greach">citizens</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Asset Plugin Dep" data-title="Asset Plugin Dep">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>File</h2>
+                <hr/><br/>
+<pre><code class="language-javascript">//=require ember
+//=require handlebars
+//=require_self
+//=require_tree helpers
+//=require_tree models
+//=require_tree controllers
+//=require_tree views
+
+MyApp = Ember.Application.create({
+    ready: function() {
+        console.log("Application Launched!");
+    }
+});</code></pre>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Jquery" data-title="JQuery">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>JQuery</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Good Documentation</li>
+                    <li>Lots of efforts and tuning</li>
+                    <li>Better Dom Manupulation API ?</li>
+                    <li>Wide adoption</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="JqueryCons" data-title="JqueryCons">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>But !</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Need Module</li>
+                    <li>Dom Manipulation/JS Utilities !?</li>
+                    <li>Promise broken</li>
+                    <li>Weight</li>
+                </ul>
+
+                <p>Venkat Subramaniam</p>
+                <p>JQUERY FOR GRAILS DEVELOPERS</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Bootstrap" data-title="Bootstrap">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Bootstrap</h2>
+                <hr/><br/>
+                <div style="display: table-cell;"/>
+                    <p style="text-align: left"><strong class="greach">Pros</strong></p>
+                    <ul>
+                        <li>First one</li>
+                        <li>Good Documentation</li>
+                        <li>Wide adoption</li>
+                    </ul>
+                </div>
+                <div style="display: table-cell;"/>
+                    <p style="text-align: left"><strong>Cons</strong></p>
+                    <ul>
+                        <li>Website look all the same</li>
+                        <li>Weight</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="ft-page" data-id="GrailsJS Enough" data-title="GrailsJS Enough"> 
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Is this enough ?</h2>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="JS">
+
+    <div class="ft-page" data-id="JS Community" data-title="JS Community">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Embrace JS Community</h1>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="NodeJS" data-title="NodeJS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>NodeJS</h2>
+                <hr/><br/>
+                <img src="img/nodejs.jpg"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Grunt" data-title="Grunt">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Grunt</h2>
+                <hr/><br/>
+                <img src="img/grunt.png"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GruntDef" data-title="GruntDef">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>A Task Runner</h2>
+                <hr/><br/>
+                <ul>
+                    <li>concat</li>
+                    <li>init</li>
+                    <li>lint</li>
+                    <li>min</li>
+                    <li>qunit</li>
+                    <li>server</li>
+                    <li>test</li>
+                    <li>watch</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GruntCustom" data-title="GruntCustom">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Customization</h2>
+                <hr/><br/>
+                <ul>
+                    <li><strong class="greach">Simple</strong> config</li>
+                    <li><strong class="greach">Common</strong> build steps</li>
+                    <li><strong class="greach">Plugins</strong></li>
+                </ul>
+
+                <p>More than 3400 plugins</p>
+                <p>No more built-in tasks</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GruntHow" data-title="GruntHow">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>How</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">npm install -g grunt-cli
+
+grunt --version</pre></code>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GruntFile" data-title="GruntFile">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Gruntfile.js</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">uglify: {
+    build: {
+        files: {
+           'build/js/base.min.js': ['assets/js/base.js']
+        }
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Gulp" data-title="Gulp">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Gulp</h2>
+                <hr/><br<strong class="greach">/>
+                <img src="img/gulp.png"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Gulp" data-title="Gulp">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>What's new ?</h2>
+                <hr/><br/>
+                <ul>
+                    <li><strong class="greach">Stream</strong>-based build system</li>
+                    <li><strong class="greach">Code</strong> over configuration</li>
+                    <li><strong class="greach">Small, idiomatic</strong> Node modules</li>
+                    <li>Really <strong class="greach">simple</strong>, elegant API</li>
+                    <li><strong>Faster</strong></li>
+                    <li>800 plugins</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="GulpHow" data-title="GulpHow">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>How</h2>
+                <hr/><br/>
+    <pre><code class="language-javascript">var gulp = require('gulp'),
+  stylus = require('gulp-stylus'),
+  autoprefixer = require('gulp-autoprefixer');
+
+gulp.task('default', function() {
+  return gulp.src('src/styles/*.styl')
+    .pipe(stylus())
+    .pipe(autoprefixer())
+    .pipe(gulp.dest('public/styles'));
+});</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MVC" data-title="MVC">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Use a MVC</h2>
+                <hr/><br/>
+                <p>http://todomvc.com around 70 MVCs</p>
+                <div style="width: 100%">
+                    <div style="float:left;text-align:right;display:inline-block;width: 25%">
+                        <img src="img/backbone.png" width="50%"/>
+                    </div>
+                    <div style="float: left; font-size: 25px; text-align: left; display: inline-block; width: 25%">
+                        <img src="img/ember.png" width="50%"/>
+                    </div>
+                    <div style="float: right; font-size: 25px; text-align: right; display: inline-block; width: 25%">
+                        <img src="img/angular.jpg" width="50%"/>
+                    </div>
+                    <div style="float: right; font-size: 25px; text-align: right; display: inline-block; width: 25%">
+                        <img src="img/cujo.png" width="50%"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </div>
+
+<div class="ft-section" data-id="Package">
+
+    <div class="ft-page" data-id="PackageModule" data-title="PackageModule">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Package and Module</h1>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="WhyModule" data-title="WhyModule">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <blockquote>The future of JS is module not framework</blockquote>
+                <cite>John Hann</cite>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Package" data-title="Package">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>What is a package ?</h2>
+                <hr/><br/>
+                <blockquote>a package is a set of one or more modules that are meant to work together</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Module" data-title="Module">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>What is a module ?</h2>
+                <hr/><br/>
+                <blockquote>a module is a way of exposing an Object or a function, respecting isolation, namespacing and private state</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="ModulePattern" data-title="ModulePattern">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Module Pattern</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Isolation</li>
+                    <li>Namespacing</li>
+                    <li>Private State</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="ModulePatternSample" data-title="ModulePatternSample">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Module Pattern In Action</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">var MODULE = (function () {
+    var my = {};
+    var privateVariable = 1;
+
+    function privateMethod() {
+        // ...
+    }
+
+    my.moduleProperty = 1;
+    my.moduleMethod = function () {
+        // ...
+    };
+
+    return my;
+}());
+
+var my_module = new MODULE();</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="NPM" data-title="NPM">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>NPM</h2>
+                <hr/><br/>
+                <ul>
+                    <li>The package manager with the Node.js</li>
+                    <li>Install code and Manage code dependencies</li>                
+                    <li>More that 90 000 packages in npm</li>
+                </ul>
+                <img src="img/npm.png" class="stacked-center"/>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="NPMUsage" data-title="NPMUsage">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Usage</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">npm install angular   
+npm uninstall angular
+npm update angular  
+npm search angular</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="FE" data-title="FE">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Wait, I'm a <strong class="greach">front-end</strong> engineer</h2> 
+                <p>and</p> 
+                <h2>I am using <strong>Grails</strong> for backend not NodeJS/NPM !</h2>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Bower" data-title="Bower">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Bower</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Most popular package manager for <strong class="greach">client-side</strong> JS</li>
+                    <li>20000 packages</li>
+                </ul>
+                <img src="img/bower.png" class="stacked-center" width="20%"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="BowerUsage" data-title="BowerUsage">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Usage</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">bower install --save backbone
+bower uninstall --save backbone
+bower-update //to update properly
+bower search backbone</code></pre>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="NPMBower" data-title="NPMBower">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Differences with NPM</h2>
+                <hr/><br/>
+                <ul>
+                    <li>With Bower, each package is installed <strong class="greach">once</strong></li>
+                    <li>NPM dictates that packages follow the <strong class="greach">CommonJS</strong> specification</li>
+                    <li>Bower makes <strong class="greach">no assumptions</strong> about how assets are written or included</li>
+                    <li>Bower is <strong>simplistic</strong> compare to NPM</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="Module">
+
+    <div class="ft-page" data-id="ExposeModule" data-title="ExposeModule">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Expose and Use Module</h1>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Format" data-title="Format">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Format</h2>
+                <hr/><br/>
+                <ul>
+                    <li>CommonJS</li>
+                    <li>AMD</li>
+                    <li>Harmony</li>
+                </ul>
+
+                <p>http://addyosmani.com/writing-modular-js</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="CommonJS" data-title="CommonJS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>CommonJS</h2>
+                <hr/>
+                <p>MODULE.js</p>
+                <pre><code class="language-javascript">var privateVariable = 1;
+var privateMethod = function () {  // ... };
+exports.moduleMethod: function () {  // ... };</code></pre>
+
+                <p>someplace.js</p>
+                <pre><code class="language-javascript">var my_module = require(‘./MODULE’);</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="AMD" data-title="AMD">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>AMD</h2>
+                <hr/>
+                <p>MODULE.js</p>
+                <pre><code class="language-javascript">define(function () {
+  return function() {
+    var privateVariable = 1;
+    var privateMethod = function () { // ... };
+    return function () {  // ... };
+  };
+});</code></pre>
+
+                <p>someplace.js</p>
+                <pre><code class="language-javascript">define(['MODULE'], function (my_module) {
+});</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Harmony" data-title="Harmony">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Harmony</h2>
+                <hr/>
+                <p>MODULE.js</p>
+                <pre><code class="language-javascript">export function MODULE() {
+  var privateVariable = 1;
+  var privateMethod = function () { // ... };
+  // ...
+};</code></pre>
+
+                <p>someplace.js</p>
+                <pre><code class="language-javascript">import my_module from './MODULE';</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="ComplexityJS" data-title="ComplexityJS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Haaaaa !!!!!!</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Already 3 Module Formats
+                    <li>Dart, ES5, ES6</li>
+                    <li>SASS, LESS, Stylus</li>
+                    <li>Grunt, Gulp</li>
+                    <li>Linter</li>
+                    <li>JS Unit Test</li>
+                    <li>Pkg Manager</li>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="IssueJS" data-title="IssueJS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Problem</h2>
+                <hr/><br/>
+                <ul>
+                    <li>boilerplate</li>
+                    <li>conf</li>
+                    <li>setup</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="DepManagementGrails" data-title="DepManagementGrails">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Grails, Dependency Management</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Ivy</li>
+                    <ul>
+                        <li>snapshot handling</li>
+                        <li>Pb with packaging type</li>
+                        <li>complex POMs and classifiers</li>
+                    </ul>
+                    <li>Aether</li>
+                    <ul>
+                        <li>Improvment</li>
+                    </ul>
+                    <li>Gradle for Grails 3</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="GrailsPluginJS" data-title="GrailsPluginJS">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Grails Plugins for JS</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Resource plugin</li>
+                    <li>Asset Plugin</li>
+                    <li>115 Plugins for CSS</li>
+                    <li>166 Plugins for Javascript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="ft-page" data-id="ComplexityGrails" data-title="ComplexityGrails">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Problem</h2>
+                <hr/><br/>
+                <ul>
+                    <li>boilerplate</li>
+                    <li>conf</li>
+                    <li>setup</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="Result" data-title="Result">
+        <div class="stack-center">
+            <div class="stacked-center">
+                    <h2>It's a <strong>mess</strong> !</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="Rave">
+
+    <div class="ft-page" data-id="Solution" data-title="Solution">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1><strong class="greach">┏( ＾◡＾)┛</strong> <strong>┗(＾◡＾ )┓</strong></h1>
+                <h1>RaveJS</strong></h1>
+                <h1><strong>┗( ＾◡＾)┓</strong> <strong class="greach">┓(＾◡＾ )┛</strong></h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="Content" data-title="Content">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Goal</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Rave <strong class="greach">eliminates</strong></li>
+                    <ul>
+                        <li>configuration</li>
+                        <li>machinery</li>
+                        <li>complexity</li>
+                    </ul>
+                    <li><strong>Not</strong> a framework</li>
+                    <li><strong class="greach">Integration</strong> with most framework</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MetaData" data-title="MetaData">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>First</h2>
+                <hr/><br/>
+                <h2>Use Metadata from Package Author</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="BowerJsonFile" data-title="BowerJsonFile">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>bower.json</h2>
+                <hr/><br/>
+                <ul>
+                    <li>name</li>
+                    <li>main</li>
+                    <li>dependencies</li>
+                    <li>devDependencies</li>
+                    <li>resolutions</li>
+                    <li>moduleType</li>
+                </ul>
+                <p>description, licence, version, ignore, keywords</p>
+                <p>authors, homepage, repository, private</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="BowerJsonSample" data-title="BowerJsonSample">
+        <div class="stack-center">
+            <div class="stacked-center">
+            <pre><code class="language-javascript">{
+    "name": "wire",
+    "version": "0.10.9",
+    "main": "./wire.js",
+    "moduleType": ["amd"],
+    "dependencies": {
+        "meld": "~1",
+        "when": "~3",
+        "poly": "~0"
+    },
+    "devDependencies": {
+        "curl": "~0",
+        "requirejs": "~2",
+        "requirejs-domready": "~2",
+        "sizzle": "~1",
+        "jquery": "~1",
+        "dojo": "~1",
+        "dijit": "~1"
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="PackageJson" data-title="PackageJson">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>package.json</h2>
+                <hr/><br/>
+                <ul>
+                    <li>name
+                    <li>main
+                    <li>dependencies
+                    <li>devDependencies
+                    <li>peerDependencies
+                    <li>bundledDependencies
+                    <li>optionalDependencies
+                    <li>directories
+                <ul>
+
+                <p>description, keywords, homepage, bugs, ...</p>
+            </div>
+        </div>
+    </div>
+    <div class="ft-page" data-id="PackageJsonSample" data-title="PackageJsonSample">
+        <div class="stack-center">
+            <div class="stacked-center">
+            <pre><code class="language-javascript">{
+    "name": "wire",
+    "version": "0.10.9",
+    "dependencies": {
+        "meld": "~1",
+        "when": ">=2.6.0 "
+    },
+    "devDependencies": {
+        "buster": "~0.7",
+        "bower": "~1",
+        "gent": "~0.6"
+    },
+    "main": "./wire",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "buster-test -e node",
+        "prepublish": "bower install"
+    }
+}</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="mix" data-title="mix">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Mix NPM and Bower</h2>
+                <hr/><br/>
+                <p>data-rave-meta="bower, node"</p>
+                <pre><code class="language-javascript">npm install --save angular
+bower install --save when</code></pre>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="ES6" data-title="ES6">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Embraces the future</h2>
+                <hr/><br/>
+                <p>an <strong class="greach">ES6 Loader</strong> polyfill built in</p>
+                <p>Dynamically <strong>loads</strong> ES6 modules in current <strong class="greach">browsers</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Extension" data-title="Extension">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Rave extensions</h2>
+                <hr/><br/> 
+                <ul>
+                    <li>Loading patterns</li>
+                    <li>Build patterns</li>
+                    <li>Deployment patterns</li>
+                    <li>Testing patterns</li>
+                    <li>Adding missing metada from third party packages</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="CLI" data-title="CLI">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Interpreter</h2>
+                <hr/><br/>               
+                <p>In Browser Console, type rave()<p>
+                <ul>
+                    <li>rave.dump()</li>
+                    <li>rave.version</li>
+                    <li>rave.checkVersions()</li>
+                    <li>rave.help()</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ft-page" data-id="RaveStarter" data-title="RaveStarter">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Rave Starter</h2>
+                <hr/><br/>     
+                <ul>          
+                    <li><strong>Opinionated</strong> Starter</li>
+                    <li>Change it, Remove it, Love it</li>
+                    <li>Already some available</li>
+                    <li>Create your own</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ft-page" data-id="Debug" data-title="Debug">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Debug</h2>
+                <hr/><br/>
+                <p>HTML attribute</p>               
+                <ul>
+                    <li>data-debug</li>                    
+                    <li>data-when-debug</li>
+                    <li>data-rave-debug</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ft-page" data-id="Debug" data-title="Debug">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Production Ready ?</h2>
+                <hr/><br/>               
+                <p>No :(</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="ft-page" data-id="DemoAngular" data-title="DemoAngular">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Coding Time</h2>
+                <hr/><br/>     
+                <p>Let' try it with angular !</p>               
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ft-section" data-id="Cujo">
+
+    <div class="ft-page" data-id="SPAArchi" data-title="SPAArchi">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>MVC</h1>
+                <hr/><br/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="SPAArchi" data-title="SPAArchi">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>SPA Architecture</h2>
+                <hr/><br/>     
+                <img src="img/SPAArchitecture.jpg"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MVC" data-title="MVC">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Which One ?</h2>
+                <hr/><br/>     
+                <p class="ft-fragment"><img src="img/cujo.png"/></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Inspiration" data-title="Inspiration">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Inspiration</h2>
+                <hr/><br/>     
+                <ul>
+                    <li>Spring like</li>
+                    <li>Functional</li> 
+                    <li>JS prototypal roots</li>
+                    <li>Architecture tool kit</li>
+                    <li>HTML, CSS, and Javascript</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MVCGrails" data-title="MVCGrails">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Small package</h2>
+                <hr/><br/>
+                <img src="img/cujolib.png"/>     
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ft-page" data-id="Wire" data-title="Wire">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Wire</h2>
+                <hr/><br/>
+                <ul>
+                    <li>Dependency Injection</li>
+                    <li><strong class="greach">Lifecycle</strong> management</li>
+                    <li>Configuration</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="WireCode" data-title="WireCode">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Show me</h2>
+                <hr/><br/>
+                <pre><code class ="language-javascript">define({
+  helloWired: {
+    create: {
+      module: 'app/hello-wired',
+      args: { $ref: 'dom.first!hello' }
+    },
+    init: {
+      sayHello: { $ref: 'message' }
+    }
+  }
+});</code></pre>   
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="AOP" data-title="AOP">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Meld</h2>
+                <hr/><br/>
+                <ul>
+                    <li><strong class="greach">Aspect</strong> Oriented Programming</li>
+                    <li><strong class="greach">change/add</strong> behavior to existing methods</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="AOPExplained" data-title="AOPExplained">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Seen this before ?</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">var origDoSomething = thing.doSomething;
+thing.doSomething = function() {
+  doSomethingElseFirst();
+  return origDoSomething.apply(this, arguments);
+}
+</code></pre>                
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="MeldinAction" data-title="MeldInAction">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Meld in Action</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">var myObject = {
+  doSomething: function(a, b) { return a + b; }
+};
+
+// Call a function after myObject.doSomething returns
+var remover = meld.after(myObject, 'doSomething', function(result) {
+  console.log('myObject.doSomething returned: ' + result);
+});
+
+myObject.doSomething(1, 2); // Logs: "myObject.doSomething returned: 3"
+remover.remove();
+myObject.doSomething(1, 2); // Nothing logged
+</code></pre>    
+            </div>
+        </div>
+    </div>    
+
+
+    <div class="ft-page" data-id="MeldinAction" data-title="MeldInAction">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>AOP + DI</h2>
+                <hr/><br/>
+                <pre><code class="language-javascript">todos: {
+  create: {
+    module: 'cola/Collection',
+    args: {
+      strategyOptions: {
+        validator: { module: 'app/create/validateTodo' }
+      }
+    }
+  },
+  before: {
+    add: 'cleanTodo | generateMetadata',
+    update: 'cleanTodo'
+  }
+}</code></pre>
+                <p>meld + wire = <strong class="greach"><3</strong></p>
+            </div>
+        </div>
+    </div>    
+
+    <div class="ft-page" data-id="DemoCujo" data-title="DemoCujo">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h2>Coding Time</h2>
+                <hr/><br/>     
+                <p>Let' try <strong>RaveJS</strong> + <strong class="greach">CujoJS</strong> !</p>               
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="ft-section" data-id="Keytakeaways">
+
+    <div class="ft-page" data-id="Something" data-title="Something">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <h1>Key takeaways</h1>
+                <hr/><br/>
+                <ul>
+                    <li>RaveJS <strong class="greach">simplify</strong> your life</li>
+                    <li>CujoJS provides <strong>vital</strong> architectural tools</li>
+                    <li>Grails provides the best <strong class="greach">server-side</strong> architecture</li>
+                    <li><strong>Help</strong> for a better <strong class="greach">integration</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="ft-page" data-id="Thankyou" data-title="Thankyou">
+        <div class="stack-center">
+            <div class="stacked-center">
+                <hr/><br/>
+                <h1>That's all Folks !</h1>
+                <hr/>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+<div class="loglog"></div>
+
+<script src="js/brav1toolbox.js"></script>
+<script src="js/flowtime.js"></script>
+<script src="assets/js/prism.js"></script>
+
+<script type="text/javascript">
+    var cacheTitle = document.title.replace("Flowtime.js | ", "");
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-1228618-10']);
+    _gaq.push(['_trackPageview']);
+    _gaq.push(['_trackEvent', 'Flowtime', 'Landing', document.title]);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+    // Configuration API test
+    Flowtime.showProgress(true);
+    // Flowtime.fragmentsOnSide(true);
+    // Flowtime.fragmentsOnBack(true);
+    // Flowtime.useHistory(false);
+    // Flowtime.slideInPx(true);
+    // Flowtime.sectionsSlideToTop(true);
+    // Flowtime.gridNavigation(false);
+    // Flowtime.useOverviewVariant(true);
+    Flowtime.parallaxInPx(true);
+    Flowtime.mouseDragEnabled(true);
+    //
+    // event management
+    Flowtime.addEventListener("flowtimenavigation", onNavigation, false);
+    function onNavigation(e)
+    {
+        _gaq.push(['_trackEvent', 'Flowtime', 'Navigation', cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", "")]);
+        // console.log(cacheTitle + ' > ' + document.title.replace("Flowtime.js | ", ""));
+        cacheTitle = document.title.replace("Flowtime.js | ", "");
+        //console.log('section', e.section, 'sectionIndex', e.sectionIndex);
+        //console.log('page', e.page, 'pageIndex', e.);
+        //console.log('pastSectionIndex', e.pastSectionIndex, 'pastPageIndex', e.pastPageIndex);
+        //console.log('prevSection', e.prevSection);
+        //console.log('nextSection', e.nextSection);
+        //console.log('prevPage', e.prevPage);
+        //console.log('nextPage', e.nextPage);
+        //console.log('fragment', e.fragment, + 'fragmentIndex', e.fragmentIndex);
+        //console.log("isOverview", e.isOverview);
+        //console.log('progress:', e.progress, 'total:', e.total);
+        // var value = Math.round(e.progress * 100 / e.total);
+        // console.log('Completion: ' + value + '%');
+    }
+    // starts the application with configuration options
+    Flowtime.start();
+</script>
+</body>
+</html>
